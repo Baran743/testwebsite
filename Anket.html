@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Site </title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="font" style="background-color: #141414;">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" >
+                    <img src="/images/nevergonnagiveyouup.gif"
+                    style="max-width:100%;height:auto;margin-top:15px;border-radius:15px" width="60" height="60" alt="?" >
+                </a>
+                <div class="navbar__toggle" id="mobile-menu">   
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/Anasayfa.html" class="navbar__links"> Anasayfa </a>
+                    </li>
+                    <li class="navbar__item">
+                    <a href="/Projeler.html" class="navbar__links"> Projeler </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/İletişim.html" class="navbar__links"> İletişim </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/Anket.html" class="navbar__links"> Anket </a>
+                    </li>
+                </ul>
+            </div> 
+        </nav>
+
+        <div class="form-container">
+            <h1>Anket</h1>
+            <br><br>
+            <form id="myForm">
+                <label for="renk"><b>Favori renginiz nedir?</b></label>
+                <select id="renk" name="renk" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="kirmizi">Kırmızı</option>
+                    <option value="mavi">Mavi</option>
+                    <option value="yesil">Yeşil</option>
+                    <option value="sari">Sarı</option>
+                </select><br><br>
+        
+                <label for="hava"><b>Bugün hava nasıl?</b></label>
+                <select id="hava" name="hava" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="gunesli">Güneşli</option>
+                    <option value="bulutlu">Bulutlu</option>
+                    <option value="yagmurlu">Yağmurlu</option>
+                    <option value="karli">Karlı</option>
+                </select><br><br>
+        
+                <label><b>En sevdiğiniz mevsim nedir?</b></label>
+        <div style="display: inline-block;">
+            <input type="radio" id="ilkbahar" name="mevsim" value="ilkbahar" required>
+            <label for="ilkbahar"><b>İlkbahar</label>
+        </div>
+        <div style="display: inline-block; margin-left: 15px;">
+            <input type="radio" id="yaz" name="mevsim" value="yaz" required>
+            <label for="yaz"><b>Yaz</b></label>
+        </div>
+        <div style="display: inline-block; margin-left: 15px;">
+            <input type="radio" id="sonbahar" name="mevsim" value="sonbahar" required>
+            <label for="sonbahar"><b>Sonbahar</b></label>
+        </div>
+        <div style="display: inline-block; margin-left: 15px;">
+            <input type="radio" id="kis" name="mevsim" value="kis" required>
+            <label for="kis"><b>Kış</b></label>
+        </div>
+        <br><br><br>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+        
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event){
+                event.preventDefault(); // Formun gönderimini durdurur
+                const renk = document.getElementById("renk").value;
+                const cinsiyet = document.querySelector('input[name="cinsiyet"]:checked').value;
+                const hava = document.getElementById("hava").value;
+                const mevsim = document.querySelector('input[name="mevsim"]:checked').value;
+        
+                console.log("Favori Renk: " + renk);
+                console.log("Bugünkü Hava: " + hava);
+                console.log("En Sevdiğiniz Mevsim: " + mevsim);
+                
+                alert("Form başarıyla gönderildi!");
+            });
+        </script>
+
+        
+
+        <!-- Footer -->
+
+        <div class="footer__container">
+            <div class="footer__links">
+                <div class="footer__links--wrapper">
+                    <div class="footer__links--items">
+                        <h2> Başlık </h2>
+                        <a href="/"> deneme satır</a>   
+                        <a href="/"> deneme satır</a>   
+                        <a href="/"> deneme satır</a>   
+                        <a href="/"> deneme satır</a>   
+                        <a href="/"> deneme satır</a>   
+                    </div>                  
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
